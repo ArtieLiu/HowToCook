@@ -3,7 +3,7 @@
     var giscus = document.querySelector("script[src*=giscus]")
 
     /* Set palette on initial load */
-    var palette = _get("__palette")
+    var palette = __get("__palette")
     if (palette && typeof palette.color === "object") {
         var theme = palette.color.scheme === "slate" ? "dark" : "light"
         giscus.setAttribute("data-theme", theme)
@@ -13,7 +13,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         var ref = document.querySelector("[data-md-component=palette]")
         ref.addEventListener("change", function () {
-            var palette = _get("__palette")
+            var palette = __get("__palette")
             if (palette && typeof palette.color === "object") {
                 var theme = palette.color.scheme === "slate" ? "dark" : "light"
 
